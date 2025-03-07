@@ -84,7 +84,7 @@ const AboutUs = () => {
   ]
   
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 pt-16">
+    <div className="min-h-screen pt-16 text-gray-100 bg-gray-900">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -96,10 +96,10 @@ const AboutUs = () => {
           <div className="absolute bottom-10 right-10 w-64 h-64 bg-purple-500 rounded-full filter blur-[100px] opacity-20"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
+              className="mb-6 text-4xl font-bold tracking-tight md:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -108,7 +108,7 @@ const AboutUs = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="max-w-3xl mx-auto text-xl leading-relaxed text-gray-300 md:text-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -129,10 +129,10 @@ const AboutUs = () => {
                   className="relative px-8 py-3.5 bg-gray-800 rounded-lg leading-none flex items-center divide-x divide-gray-600"
                 >
                   <span className="flex items-center space-x-2">
-                    <span className="pr-6 text-indigo-300 font-semibold">Join our community</span>
+                    <span className="pr-6 font-semibold text-indigo-300">Join our community</span>
                   </span>
-                  <span className="pl-6 text-indigo-200 group-hover:text-indigo-100 transition duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <span className="pl-6 text-indigo-200 transition duration-300 group-hover:text-indigo-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                     </svg>
                   </span>
@@ -151,9 +151,9 @@ const AboutUs = () => {
       
       {/* Our Mission Section */}
       <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
+        <div className="container px-4 mx-auto">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-16">
+            <div className="flex flex-col items-center gap-16 md:flex-row">
               <motion.div 
                 ref={missionRef}
                 variants={containerVariants}
@@ -163,21 +163,21 @@ const AboutUs = () => {
               >
                 <motion.h2 
                   variants={itemVariants} 
-                  className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                  className="mb-6 text-3xl font-bold text-transparent md:text-4xl bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
                 >
                   Our Mission
                 </motion.h2>
                 
                 <motion.p 
                   variants={itemVariants}
-                  className="text-lg text-gray-300 mb-6 leading-relaxed"
+                  className="mb-6 text-lg leading-relaxed text-gray-300"
                 >
                   At Thrive Together, we're on a mission to revolutionize how people save, support each other, and build financial resilience through the power of community.
                 </motion.p>
                 
                 <motion.p 
                   variants={itemVariants}
-                  className="text-lg text-gray-300 leading-relaxed"
+                  className="text-lg leading-relaxed text-gray-300"
                 >
                   We believe that financial wellness shouldn't be a solitary journey. By combining traditional saving methods with community support networks, we create a platform where everyone can thrive together.
                 </motion.p>
@@ -190,12 +190,12 @@ const AboutUs = () => {
                 transition={{ duration: 0.8 }}
               >
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                  <div className="absolute transition duration-500 rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 blur group-hover:opacity-50"></div>
                   <div className="relative">
                     <img 
                       src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                       alt="People supporting each other" 
-                      className="rounded-lg w-full h-full object-cover"
+                      className="object-cover w-full h-full rounded-lg"
                     />
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-indigo-600/20 to-purple-600/20 opacity-60"></div>
                   </div>
@@ -207,43 +207,43 @@ const AboutUs = () => {
       </section>
       
       {/* Our Values Section */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
+      <section className="relative py-20 overflow-hidden bg-gray-900">
         <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500 rounded-full filter blur-[120px] opacity-10"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-[120px] opacity-10"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-6xl mx-auto">
             <motion.div 
               ref={valuesRef}
               variants={containerVariants}
               initial="hidden"
               animate={isValuesInView ? "visible" : "hidden"}
-              className="text-center mb-16"
+              className="mb-16 text-center"
             >
               <motion.h2 
                 variants={itemVariants} 
-                className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                className="mb-6 text-3xl font-bold text-transparent md:text-4xl bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
               >
                 Our Values
               </motion.h2>
               
               <motion.p 
                 variants={itemVariants}
-                className="text-lg text-gray-300 max-w-3xl mx-auto"
+                className="max-w-3xl mx-auto text-lg text-gray-300"
               >
                 The core principles that guide everything we do at Thrive Together.
               </motion.p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {values.map((value, index) => (
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-700 transform transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/50 group"
+                  className="p-8 transition-all duration-300 transform border border-gray-700 bg-gray-800/80 backdrop-blur-sm rounded-xl hover:-translate-y-2 hover:border-indigo-500/50 group"
                 >
-                  <div className="text-4xl mb-6 bg-gray-700 inline-block p-4 rounded-lg group-hover:bg-indigo-900/30 transition-colors duration-300">{value.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                  <div className="inline-block p-4 mb-6 text-4xl transition-colors duration-300 bg-gray-700 rounded-lg group-hover:bg-indigo-900/30">{value.icon}</div>
+                  <h3 className="mb-3 text-xl font-bold text-white">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
                 </motion.div>
               ))}
@@ -252,67 +252,10 @@ const AboutUs = () => {
         </div>
       </section>
       
-      {/* Our Team Section */}
-      <section className="py-20 bg-gray-800 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500 rounded-full filter blur-[120px] opacity-10"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-[120px] opacity-10"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <motion.div 
-              ref={teamRef}
-              variants={containerVariants}
-              initial="hidden"
-              animate={isTeamInView ? "visible" : "hidden"}
-              className="text-center mb-16"
-            >
-              <motion.h2 
-                variants={itemVariants} 
-                className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
-              >
-                Meet Our Team
-              </motion.h2>
-              
-              <motion.p 
-                variants={itemVariants}
-                className="text-lg text-gray-300 max-w-3xl mx-auto"
-              >
-                The passionate individuals behind Thrive Together, dedicated to building a platform that empowers communities.
-              </motion.p>
-            </motion.div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-gray-900 rounded-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-500/10 group"
-                >
-                  <div className="h-64 overflow-hidden relative">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
-                  </div>
-                  <div className="p-6 border-t border-gray-800">
-                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-indigo-400 transition-colors duration-300">{member.name}</h3>
-                    <p className="text-indigo-400 font-medium mb-3">{member.role}</p>
-                    <p className="text-gray-400">{member.bio}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Our Story Section */}
       <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="container px-4 mx-auto">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row-reverse items-center gap-16">
+            <div className="flex flex-col items-center gap-16 md:flex-row-reverse">
               <motion.div 
                 ref={storyRef}
                 variants={containerVariants}
@@ -322,28 +265,28 @@ const AboutUs = () => {
               >
                 <motion.h2 
                   variants={itemVariants} 
-                  className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
+                  className="mb-6 text-3xl font-bold text-transparent md:text-4xl bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400"
                 >
                   Our Story
                 </motion.h2>
                 
                 <motion.p 
                   variants={itemVariants}
-                  className="text-lg text-gray-300 mb-6 leading-relaxed"
+                  className="mb-6 text-lg leading-relaxed text-gray-300"
                 >
                   Thrive Together was born from a simple observation: financial challenges are easier to overcome when faced together. Our founder, Emma Rodriguez, experienced this firsthand when her community rallied to support her during a health crisis.
                 </motion.p>
                 
                 <motion.p 
                   variants={itemVariants}
-                  className="text-lg text-gray-300 mb-6 leading-relaxed"
+                  className="mb-6 text-lg leading-relaxed text-gray-300"
                 >
                   Inspired by traditional community savings circles and modern financial technology, Emma assembled a team of experts to create a platform that makes community-based financial support accessible to everyone.
                 </motion.p>
                 
                 <motion.p 
                   variants={itemVariants}
-                  className="text-lg text-gray-300 leading-relaxed"
+                  className="text-lg leading-relaxed text-gray-300"
                 >
                   Since our launch in 2023, we've helped thousands of people build financial resilience while fostering meaningful connections within their communities.
                 </motion.p>
@@ -357,7 +300,7 @@ const AboutUs = () => {
               >
                 <div className="relative">
                   {/* Timeline Animation */}
-                  <div className="relative h-96 border-l-4 border-indigo-500 border-opacity-30 ml-6 pl-8">
+                  <div className="relative pl-8 ml-6 border-l-4 border-indigo-500 h-96 border-opacity-30">
                     {/* Timeline Points */}
                     {isStoryInView && (
                       <>
@@ -427,26 +370,26 @@ const AboutUs = () => {
       </section>
       
       {/* Join Us Banner */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-90"></div>
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-20 mix-blend-overlay"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-gray-900/30 backdrop-blur-sm p-10 rounded-2xl border border-white/10">
-              <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="p-10 border bg-gray-900/30 backdrop-blur-sm rounded-2xl border-white/10">
+              <div className="flex flex-col items-center justify-between md:flex-row">
                 <div className="mb-8 md:mb-0">
-                  <h2 className="text-3xl font-bold mb-3 text-white">Join Our Mission</h2>
-                  <p className="text-gray-200 text-lg max-w-xl">Become part of a community that thrives together. Start your financial wellness journey today with the support of others.</p>
+                  <h2 className="mb-3 text-3xl font-bold text-white">Join Our Mission</h2>
+                  <p className="max-w-xl text-lg text-gray-200">Become part of a community that thrives together. Start your financial wellness journey today with the support of others.</p>
                 </div>
                 <div className="relative group">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-300"></div>
                   <button 
                     onClick={() => navigate('/join')}
-                    className="relative px-8 py-4 bg-gray-900 rounded-full text-white font-bold flex items-center space-x-2 group-hover:bg-gray-800 transition duration-300"
+                    className="relative flex items-center px-8 py-4 space-x-2 font-bold text-white transition duration-300 bg-gray-900 rounded-full group-hover:bg-gray-800"
                   >
                     <span>Get Started</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
                   </button>
@@ -457,58 +400,7 @@ const AboutUs = () => {
         </div>
       </section>
       
-      {/* Stats Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <motion.div 
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">10K+</div>
-                <p className="text-gray-400">Community Members</p>
-              </motion.div>
-              
-              <motion.div 
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">$2M+</div>
-                <p className="text-gray-400">Saved Together</p>
-              </motion.div>
-              
-              <motion.div 
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
-                <p className="text-gray-400">Communities Formed</p>
-              </motion.div>
-              
-              <motion.div 
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
-                <p className="text-gray-400">Support Available</p>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
       
       {/* Custom CSS for glow effect */}
       <style jsx>{`
